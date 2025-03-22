@@ -78,7 +78,7 @@ async function renderWidget() {
 	preloader.show()
 	await setState()
 
-	console.log('renderData', tableState.renderData)
+	console.log('tableState', tableState)
 
 	renderTable(tableState.renderData ?? [])
 	tableClickHandler()
