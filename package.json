@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node post-build.cjs",
-    "preview": "vite preview"
+    "build": "tsc -b && vite build && node post-build.cjs"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
