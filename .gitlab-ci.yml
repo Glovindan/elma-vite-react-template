@@ -1,0 +1,23 @@
+image: node:latest
+
+variables:
+  DIST_DIRECTORY: 'dist'
+
+stages:
+  - build
+
+build_job:
+  stage: build
+  tags:
+    - linux
+  before_script:
+    # Восстанавливаем зависимости
+    - npm install
+  script:
+    # Запускаем сборку
+    - npm run build
+  artifacts:
+    when: on_success
+    expire_in: never
+    paths:
+      - ${DIST_DIRECTORY}
